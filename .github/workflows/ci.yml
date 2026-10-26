@@ -82,6 +82,6 @@ jobs:
             cd /home/azureuser/ix-voice-production
             docker compose pull backend
             docker compose up -d --no-deps backend
-            sleep 3
+            sleep 10
             curl -f http://localhost:8081/api/v1/health || exit 1
             echo "Backend successfully deployed to Azure VPS!"
